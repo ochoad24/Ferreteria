@@ -71,7 +71,8 @@ import Profile from './views/admin/users/Profile.vue'
 
 // Settings
 import Settings from './views/admin/Settings.vue'
-
+// PRODUCTOS
+import Categoria from './views/admin/src/categoria.vue'
 /*
  |--------------------------------------------------------------------------
  | Other
@@ -316,7 +317,11 @@ const routes = [
         path: 'apps/todos',
         component: TodosApp
       },
-
+      // Seccion Categoria
+      {
+        path: 'src/categoria',
+        component: Categoria
+      },
       // Settings
       {
         path: 'settings',

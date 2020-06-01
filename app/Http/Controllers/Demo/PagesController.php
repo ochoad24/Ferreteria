@@ -16,8 +16,9 @@ class PagesController extends Controller
         }
     }
 
-    public function allUsers()
+    public function allUsers(Request $request)
     {
+    // return $request;
        return $users = User::whereRole('user')->paginate(5);
     }
 

@@ -254,7 +254,18 @@
               Todos
             </router-link>
           </v-collapse-item>
-
+          <!-- TEST CRUDS -->
+          <v-collapse-item active-url="/admin/apps">
+            <a slot="item-title" href="#">
+              <i class="icon-fa icon-fa-bars"/>Productos
+              <span class="icon-fa arrow icon-fa-fw"/>
+            </a>
+            <router-link
+              to="/admin/src/categoria">
+              Categoria
+            </router-link>
+          </v-collapse-item>
+          <!-- TEST CRUD -->
           <v-collapse-item active-url="/admin/settings">
             <router-link
               slot="item-title"

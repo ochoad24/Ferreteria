@@ -47,12 +47,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'api.auth'], function (){
         Route::get('/get',[
             'as' => 'admin.users', 'uses' => 'Demo\PagesController@allUsers'
         ]);
-
+        
         Route::delete('/{id}',[
             'as' => 'admin.users.delete', 'uses' => 'Demo\PagesController@destroy'
         ]);
-
     });
-
+    Route::group(['prefix' => 'categoria'],function(){
+        Route::get('/get',[
+            'as' => 'admin.categoria', 'uses' => 'CategoriaController@index'
+        ]);
+    });
 });
 
