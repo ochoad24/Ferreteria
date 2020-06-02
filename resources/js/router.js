@@ -73,6 +73,7 @@ import Profile from './views/admin/users/Profile.vue'
 import Settings from './views/admin/Settings.vue'
 // PRODUCTOS
 import Categoria from './views/admin/src/categoria.vue'
+import Measure from './views/admin/producto/measure.vue'
 /*
  |--------------------------------------------------------------------------
  | Other
@@ -317,10 +318,16 @@ const routes = [
         path: 'apps/todos',
         component: TodosApp
       },
+      // MODULO DE PRODUCTOS
       // Seccion Categoria
       {
         path: 'src/categoria',
         component: Categoria
+      },
+      // MEDIDAS
+      {
+        path: 'producto/medida',
+        component: Measure
       },
       // Settings
       {

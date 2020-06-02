@@ -13,7 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login','AuthController@authenticate');
     Route::post('register','AuthController@authenticate');
@@ -55,6 +54,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'api.auth'], function (){
     Route::group(['prefix' => 'categoria'],function(){
         Route::get('/get',[
             'as' => 'admin.categoria', 'uses' => 'CategoriaController@index'
+        ]);
+    });
+
+    Route::group(['prefix' => 'measure'],function(){
+        Route::get('/get',[
+            'as' => 'admin.measure', 'uses' => 'MeasureController@index'
+        ]);
+        Route::post('/',[
+            'as' => 'admin.measure', 'uses' => 'MeasureController@store'
         ]);
     });
 });

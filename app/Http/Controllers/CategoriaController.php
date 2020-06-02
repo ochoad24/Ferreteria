@@ -15,16 +15,16 @@ class CategoriaController extends Controller
     {
         //
         $search = explode(" ",$request->filter);
-        $sort=json_decode($request->sort,true);
-        $fieldOrder=$sort->order;
+        //$sort=json_decode($request->sort,true);
+        //$fieldOrder=$sort->order;
         //$order=$sort[1];
-        return $fieldOrder;
-        return Categoria::select('nombre','estado')
+        //return $fieldOrder;
+        return Categoria::select('nombre','estado','created_at')
         ->where(function($query) use($search){
             foreach($search as $item){
                 $query->where('categoria.nombre','like','%'.$item.'%');
             }
-        })->get();
+        })->paginate(5);
 
     }
 

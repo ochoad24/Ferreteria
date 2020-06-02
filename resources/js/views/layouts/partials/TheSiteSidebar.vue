@@ -264,6 +264,10 @@
               to="/admin/src/categoria">
               Categoria
             </router-link>
+            <router-link
+              to="/admin/producto/medida">
+              Medidas
+            </router-link>
           </v-collapse-item>
           <!-- TEST CRUD -->
           <v-collapse-item active-url="/admin/settings">
